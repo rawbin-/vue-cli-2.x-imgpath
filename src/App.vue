@@ -1,6 +1,11 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <div>
+      template相对路径写法<img src="./assets/logo.png" title="template相对路径写法">
+    </div>
+    <div>
+      template绝对路径写法<img src="@/assets/logo.png" title="template绝对路径写法">
+    </div>
     <router-view/>
   </div>
 </template>
