@@ -4,9 +4,15 @@ import HelloWorld from '@/components/HelloWorld'
 
 Vue.use(Router)
 
+const identifier = 'dist/'
+const getBasePath = () => {
+  const path = location.pathname
+  return path.substr(0, path.lastIndexOf(identifier) + identifier.length)
+}
+
 export default new Router({
   mode: 'history',
-  base: '/app-test/',
+  base: getBasePath(),
   routes: [
     {
       path: '/',
